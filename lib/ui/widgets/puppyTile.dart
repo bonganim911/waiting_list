@@ -5,13 +5,13 @@ import '../../models/puppy.dart';
 
 class PuppyTile extends StatelessWidget {
   final Puppy? puppy;
+
   PuppyTile(this.puppy);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:
-      EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       width: MediaQuery.of(context).size.width,
       margin: EdgeInsets.only(bottom: 12),
       child: Container(
@@ -27,7 +27,7 @@ class PuppyTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  puppy?.name??"",
+                  puppy?.name ?? "",
                   style: GoogleFonts.lato(
                     textStyle: TextStyle(
                         fontSize: 16,
@@ -51,14 +51,14 @@ class PuppyTile extends StatelessWidget {
                       "${puppy!.arrivalTime}",
                       style: GoogleFonts.lato(
                         textStyle:
-                        TextStyle(fontSize: 13, color: Colors.grey[100]),
+                            TextStyle(fontSize: 13, color: Colors.grey[100]),
                       ),
                     ),
                   ],
                 ),
                 SizedBox(height: 12),
                 Text(
-                  puppy?.serviceDetails??"",
+                  puppy?.serviceDetails ?? "",
                   style: GoogleFonts.lato(
                     textStyle: TextStyle(fontSize: 15, color: Colors.grey[100]),
                   ),
@@ -87,18 +87,5 @@ class PuppyTile extends StatelessWidget {
         ]),
       ),
     );
-  }
-
-  _getBGClr(int no) {
-    switch (no) {
-      case 0:
-        return Colors.indigo;
-      case 1:
-        return Colors.pinkAccent;
-      case 2:
-        return Colors.yellow;
-      default:
-        return Colors.blue;
-    }
   }
 }

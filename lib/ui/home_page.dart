@@ -57,6 +57,7 @@ class _HomePageState extends State<HomePage> {
       return ListView.builder(
         itemCount: _puppyController.puppyList.length,
         itemBuilder: (_, index) {
+
           var puppy = _puppyController.puppyList[index];
 
           if(puppy.date==DateFormat.yMd().format(_selectedDate)){
@@ -91,17 +92,14 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
+            margin: const EdgeInsets.only(top: 10, bottom: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  DateFormat.yMMMMd().format(_selectedDate),
-                  style: subHeadingStyle,
-                ),
-                Text(
-                  "Today",
+                  "Puppy Spa",
                   style: headingStyle,
-                )
+                ),
               ],
             ),
           ),
