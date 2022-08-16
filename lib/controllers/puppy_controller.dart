@@ -49,7 +49,6 @@ class PuppyController extends GetxController {
   }
 
   void markAsServiced(int id) async {
-    // await DBHelper.update(id);
     updatePuppy(id);
     getPuppies();
   }
