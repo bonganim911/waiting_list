@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
     return Container(
       margin: const EdgeInsets.only(top: 20, left: 20),
       child: DatePicker(
-        DateTime.now(),
+        DateTime(2022, 8, 15),
         height: 100,
         width: 80,
         initialSelectedDate: DateTime.now(),
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
             _bottomSheetButton(
                 label: "Delete Puppy",
                 onTap: () {
-                  _puppyController.deletePuppy(puppy);
+                  _puppyController.removePuppy(puppy);
                   Get.back();
                 },
                 clr: Colors.red[300]!,
